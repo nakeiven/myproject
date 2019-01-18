@@ -12,5 +12,6 @@ public interface Iservice {
 
     AppInfoDo selectByPrimaryKey1(Integer id);
 
+    //
     AppInfoDo insert(AppInfoDo appInfoDo);
 }
