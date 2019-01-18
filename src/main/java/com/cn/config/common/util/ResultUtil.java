@@ -14,7 +14,7 @@ public class ResultUtil<T> {
      * @return
      */
     public static <T> ResultDTO<T> success(T t) {
-        ResultDTO<T> result = new ResultDTO<>();
+        ResultDTO<T> result = new ResultDTO<T>();
         result.setSuccessd(true);
         result.setData(t);
         return result;
@@ -37,11 +37,10 @@ public class ResultUtil<T> {
     }
 
     public static <T> ResultDTO<T> error(String errorMsg) {
-        ResultDTO<T> result = new ResultDTO<>();
+        ResultDTO<T> result = new ResultDTO<T>();
         result.setSuccessd(false);
         result.setError(errorMsg);
         result.setData(null);
         return result;
     }
-
 }
