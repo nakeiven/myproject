@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<properties resource="jdbc.properties" /> 
+    <classPathEntry
+            location="src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.30.jar"/>
+    <!-- mvn mybatis-generator:generate -->
+	<!-- 配置一个代码生成操作，如果生成的目录或是数据库不一样，只需要参考增加一个context节点即可 -->
+    <context id="my" targetRuntime="MyBatis3">
+    	 <!--覆盖生成XML文件-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="${driver}"
+                        connectionURL="${url}" userId="${username}"
+                        password="${password}"/>
+        <javaModelGenerator targetPackage="com.cn.config.common.mode"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.cn.config.common.mapper"
+                             targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+     	<table tableName="sys_app_info" domainObjectName="AppInfoDo"
+			enableUpdateByExample="false" enableDeleteByExample="false">
+		</table>
+
+    </context>
+</generatorConfiguration>
