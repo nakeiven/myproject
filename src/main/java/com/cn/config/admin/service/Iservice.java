@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.cn.config.sys.service;
+package com.cn.config.admin.service;
 
 import com.cn.config.common.mode.AppInfoDo;
 

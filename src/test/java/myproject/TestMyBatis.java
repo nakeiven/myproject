@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.cn.config.common.mode.AppInfoDo;
-import com.cn.config.sys.service.Iservice;
+import com.cn.config.admin.service.Iservice;
 
 /**
  * @author Administrator

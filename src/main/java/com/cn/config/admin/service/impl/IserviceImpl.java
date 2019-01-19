@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.cn.config.sys.service.impl;
+package com.cn.config.admin.service.impl;
 
 import javax.validation.ValidationException;
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.cn.config.common.mapper.AppInfoDoMapper;
 import com.cn.config.common.mode.AppInfoDo;
-import com.cn.config.sys.service.Iservice;
+import com.cn.config.admin.service.Iservice;
 
 /**
  * @author Administrator

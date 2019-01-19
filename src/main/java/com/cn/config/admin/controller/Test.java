@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.cn.config.sys.controller;
+package com.cn.config.admin.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.alibaba.fastjson.JSON;
 import com.cn.config.common.mode.AppInfoDo;
 import com.cn.config.common.util.JedisUtil;
-import com.cn.config.sys.service.Iservice;
+import com.cn.config.admin.service.Iservice;
 
 /**
  * @author Administrator
